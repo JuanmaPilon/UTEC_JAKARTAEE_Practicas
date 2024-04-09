@@ -10,9 +10,6 @@ public class PublicadorEvento {
 	@Inject
 	private Event<Evento> eventoConcreto;
 	
-	@Inject
-	private Event<NuevoEvento> nuevoEventoConcreto;
-	
 	public void publicarEvento(String descEvento) {
 		
 		//Disparo evento
@@ -20,9 +17,6 @@ public class PublicadorEvento {
 		//a los escuchas)
 		Evento e = new Evento(descEvento);
 		eventoConcreto.fire(e);
-
-		NuevoEvento ne = new NuevoEvento("Nuevo evento: " + descEvento);
-        nuevoEventoConcreto.fire(ne);
 		
 		System.out.println("Notificando evento: " + descEvento);
 	}

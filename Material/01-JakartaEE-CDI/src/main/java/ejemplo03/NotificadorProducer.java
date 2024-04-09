@@ -2,6 +2,7 @@ package ejemplo03;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class NotificadorProducer {
