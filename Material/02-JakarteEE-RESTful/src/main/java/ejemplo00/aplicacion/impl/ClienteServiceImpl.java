@@ -52,6 +52,18 @@ public class ClienteServiceImpl implements ClienteService {
 		clientes.add(cli);
 		
 	}
+	
+	@Override
+	public Boolean isInList(String nombre) {
+		List<Cliente> clientes = obternerClientes();
+		
+		for(int i = 0; i< clientes.size(); i++) {
+			if(clientes.get(i).getNombre().equalsIgnoreCase(nombre)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	
 }

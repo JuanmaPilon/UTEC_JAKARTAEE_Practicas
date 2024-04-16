@@ -14,6 +14,7 @@ import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 
 
@@ -138,6 +139,13 @@ public class ClienteRESTful {
 		clienteService.actualizarCliente(cli);
 	}
 	
+	@GET
+	@Path("/isInList")
+	@Produces({MediaType.APPLICATION_JSON})
+	public Boolean isInList(@QueryParam("nombre") String nombre) {
+		System.out.println("Invocando operacion para saber si existe para el cliente:" + nombre);
+		return clienteService.isInList(nombre);
+	}
 
 	
 }

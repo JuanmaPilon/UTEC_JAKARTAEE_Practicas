@@ -10,4 +10,5 @@ public interface ClienteService {
 	public void borrarCliente(int id);
 	public void actualizarCliente(Cliente cli);
 	public void insertar(Cliente cli);
+	public Boolean isInList(String nombre);
 }

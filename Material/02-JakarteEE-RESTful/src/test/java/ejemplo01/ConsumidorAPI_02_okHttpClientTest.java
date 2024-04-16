@@ -68,4 +68,28 @@ public class ConsumidorAPI_02_okHttpClientTest {
 		}
 		
 	}
+	
+	@Test
+	@DisplayName("Checkear si el cliente esta")
+	public void isInList() {
+		OkHttpClient cliente = new OkHttpClient();
+		
+		
+		Request request = new Request.Builder()
+				.url("http://localhost:8080/02_jakartaRESTful_ejemplo/api/clientes/isInList?nombre=Santy")
+				.build();
+		
+		try {
+			Response response = cliente.newCall(request).execute();
+			System.out.println(
+					response.body().string());
+			
+			
+			assertThat(response.code() == 200);
+			
+		} catch (IOException e) {
+			System.out.println("Se produjo una exception");
+		}
+		
+	}
 }

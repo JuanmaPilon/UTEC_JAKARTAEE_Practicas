@@ -285,7 +285,7 @@
     </socket-binding-group>
     <deployments>
         <deployment name="021-JakartaEE-XML.war" runtime-name="021-JakartaEE-XML.war">
-            <fs-exploded path="/home/gabriel/workspace/TallerJava/fuentes/02-zJakartaEE-gRPC/target/021-JakartaEE-XML"/>
+            <fs-exploded path="/home/artorias/Desktop/Programming/JavaEE___Practices/Material/02-zJakartaEE-gRPC/target/021-JakartaEE-XML"/>
         </deployment>
     </deployments>
 </server>
