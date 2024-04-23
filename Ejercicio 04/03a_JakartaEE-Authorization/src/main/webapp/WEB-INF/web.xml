@@ -17,6 +17,17 @@
 	<!--  restricción de seguridad #2 -->
 	<security-constraint>
 		<web-resource-collection>
+			<web-resource-name>Mensajes autenticados</web-resource-name>
+			<url-pattern>/mensajes/empleado/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>empleado</role-name> <!--  solo los usuarios con el rol empleado podrán acceder a la url -->
+		</auth-constraint>
+	</security-constraint>
+	
+	<!--  restricción de seguridad #3 -->
+	<security-constraint>
+		<web-resource-collection>
 			<web-resource-name>Mensajes autenticados cifrados</web-resource-name>
 			<url-pattern>/mensajes/gerente/enviarMensajeSeguro</url-pattern>
 		</web-resource-collection>
