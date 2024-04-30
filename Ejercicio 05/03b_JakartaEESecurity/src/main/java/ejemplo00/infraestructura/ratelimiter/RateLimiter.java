@@ -31,7 +31,7 @@ public class RateLimiter {
 		//en cualquire momento, el servidor podrá procesar un máximo de 10 transacciones concurrentes
 		//trabajando a su máxima capacidad aceptará una nueva 1 transación por segundo
 		Bandwidth bucketConf = Bandwidth.builder()
-				.capacity(10)
+				.capacity(20)
 				//.refillGreedy(60, Duration.ofSeconds(15))
 				.refillIntervally(5, Duration.ofSeconds(1))
 				.build();

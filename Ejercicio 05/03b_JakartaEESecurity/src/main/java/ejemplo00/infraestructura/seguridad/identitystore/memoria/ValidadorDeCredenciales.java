@@ -27,7 +27,7 @@ public class ValidadorDeCredenciales implements IdentityStore {
 	public void inicializar() {
 	
 		hashUsuarios.put("usr1", new UsuarioSistema("usr1", "usr1pass", 
-				new ArrayList<String>(Arrays.asList("grupo1"))));
+				new ArrayList<String>(Arrays.asList("grupo1","admin"))));
 		
 		hashUsuarios.put("usr2", new UsuarioSistema("usr2", "usr2pass", 
 				new ArrayList<String>(Arrays.asList("grupo2"))));
@@ -36,6 +36,9 @@ public class ValidadorDeCredenciales implements IdentityStore {
 				new ArrayList<String>(Arrays.asList("grupo1", "grupo2"))));
 		
 		hashUsuarios.put("usr4", new UsuarioSistema("usr4", "usr4pass", 
+				new ArrayList<String>(Arrays.asList("admin"))));
+		
+		hashUsuarios.put("usr5", new UsuarioSistema("usr5", "usr5pass", 
 				new ArrayList<String>(Arrays.asList("admin"))));
 	}
 
